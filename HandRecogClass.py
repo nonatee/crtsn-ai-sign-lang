@@ -51,7 +51,6 @@ class HandRecognnition:
         is_true, self.frame = self.cap.read()
         self.imgRGB = cv.cvtColor(self.frame, cv.COLOR_BGR2RGB)
         results = self.hands.process(self.imgRGB)
-        # print(results.multi_hand_landmarks)
 
         if results.multi_hand_landmarks:
             for handLms in results.multi_hand_landmarks:
